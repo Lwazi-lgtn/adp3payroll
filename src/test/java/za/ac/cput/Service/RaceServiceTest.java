@@ -22,10 +22,9 @@ class RaceServiceTest {
 
     @Test
     void b_read() {
-
-    service.read(race.getId());
-    assertEquals(service.read(race.getId()).getId(),race.getId());
-    System.out.println("Read: " + service.read(race.getId()) );
+    Race read = service.read(race.getId());
+    assertEquals(read.getId(),race.getId());
+    System.out.println("Read: " + read );
     }
 
     @Test
