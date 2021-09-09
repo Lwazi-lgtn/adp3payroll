@@ -14,7 +14,7 @@ public  static Race createRace(String desc){
     String id = GenericHelper.generateId();
     Race race = new Race.Builder().setId(id)
             .setDesc(desc)
-            .builder();
+            .build();
     return race;
 }
 

@@ -39,14 +39,14 @@ public class RaceRepositoryTest {
     }
 
     @Test
-    void d_delete() {
+    void e_delete() {
         boolean success = repository.delete((String) race.getId());
         assertTrue(success);
         System.out.println("delete: "+success);
     }
 
     @Test
-    void e_getAll() {
+    void d_getAll() {
         System.out.println("Show All");
         System.out.println(repository.getAll());
     }

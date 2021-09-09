@@ -23,7 +23,7 @@ public class RaceController {
         return raceService.create(newRace);
     }
 
-    @GetMapping("/read{id}")
+    @GetMapping("/read/{id}")
     public Race read(@PathVariable String id){
         return raceService.read(id);
     }
@@ -31,7 +31,7 @@ public class RaceController {
     @PostMapping("/update")
     public Race update(@RequestBody Race race){return raceService.update(race);}
 
-    @PostMapping("/delete{id}")
+    @PostMapping("/delete/{id}")
     public boolean delete(@PathVariable String id){return raceService.delete(id);}
 
     @GetMapping("/getall")

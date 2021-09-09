@@ -22,27 +22,28 @@ class RaceServiceTest {
 
     @Test
     void b_read() {
-    Race creted = service.create(race);
-    assertEquals(creted.getId(),race.getId());
-    System.out.println("Create: " + creted);
+
+    service.read(race.getId());
+    assertEquals(service.read(race.getId()).getId(),race.getId());
+    System.out.println("Read: " + service.read(race.getId()) );
     }
 
     @Test
-    void update() {
+    void c_update() {
      Race updated = new Race.Builder().copy(race).setDesc("Indian").build();
      assertNotNull(service.update(updated));
      System.out.println("Update: " + updated);
     }
 
     @Test
-    void delete() {
+    void e_delete() {
      boolean success = service.delete((String) race.getId());
      assertTrue(success);
      System.out.println("Delete: "+ success);
     }
 
     @Test
-    void getAll() {
+    void d_getAll() {
      System.out.println("Show All: ");
      System.out.println(service.getAll());
     }
